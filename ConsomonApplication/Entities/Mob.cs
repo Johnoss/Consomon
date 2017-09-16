@@ -102,8 +102,6 @@ namespace ConsomonApplication
 
 
             bool strong = GenericOperations.CalculateTypeAdvantage(Type, Target.Type);
-            if(strong)
-                damage *= (int)Math.Ceiling(Settings.StrongMP);
 
             Output.WritelineUsedAction(this, Output.AttackLabel);
             if (strong)
@@ -118,6 +116,9 @@ namespace ConsomonApplication
             int targetHealth = target.Stats[StatType.health].Value;
             if (damage > targetHealth)
                 damage = targetHealth;
+
+            if(strong)
+                damage *= (int)Math.Ceiling(Settings.StrongMP);
 
             target.ModifyStat(StatType.health, -damage);
             actionsLeft--;

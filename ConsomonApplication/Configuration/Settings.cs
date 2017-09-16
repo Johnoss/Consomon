@@ -21,7 +21,7 @@ namespace ConsomonApplication
         public const int MinDamage = 3;
         public const int DamageDeviation = 3;
 
-        public const float StrongMP = 2f;
+        public const float StrongMP = 1.5f;
 
         public const int defaultActions = 1;
 

@@ -63,7 +63,7 @@ namespace ConsomonApplication
         public const string EnemyTurnLabel = "Enemy's Turn:";
 
         public static string MobsHealedSentence = $"All {Data.MobLabel}s healed.";
-        public static string AllMobsDefeatedSentence = $"All your {Data.MobLabel}s {DefeatedLabel}.";
+        public static string AllMobsDefeatedSentence = $"All your {Data.MobLabel}s {DefeatedLabel}. You should visit a healing centre";
 
         public const string YouLostSentence = "You Lost";
         public const string YouWonSentence = "You Won";
@@ -94,6 +94,7 @@ namespace ConsomonApplication
             $"{Data.Mobs.Last().NameRaw} is the most powerful {Data.MobLabel} there is.",
             $"The farther you advance, the more difficult {Data.MobLabel}s you encounter.",
             $"The farther you advance, the more {LoadingLabel} interruptions you experience.",
+            $"You should own a diverse selection of {Data.MobLabel}s' types, so you can adapt better.",
             $"The less {Data.Stats[StatType.health].Title}s a {Data.MobLabel} has, the easier it is to catch.",
         };
 
