@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public abstract class Location : ISupplyable, IListable
     {
         protected float level;

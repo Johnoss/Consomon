@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Crossroads : Location
     {
         private int[] connectedTowns;

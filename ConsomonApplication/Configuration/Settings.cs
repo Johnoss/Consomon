@@ -74,8 +74,6 @@ namespace ConsomonApplication
         public static ConsoleColor DefaultStrongColor = ConsoleColor.Yellow;
 
         //Misc stuff
-        //public static Screen DefaultScreen = Data.Screens[ScreenType.town];
-        public static Location StartingLocation = Data.Towns[0];
         public const int MaxLoadingDelay = 100;
         public const int MinLoadingDelay = 25;
         public const int LoadingStuckDelay = 1000;
@@ -90,5 +88,9 @@ namespace ConsomonApplication
         public const int RewardDeviation = 50;
 
         public const float RewardLevelMultiplier = 3;
+
+        public static string SavePath = AppDomain.CurrentDomain.BaseDirectory + $"Properties";
+        public static string SaveFile = $"Player.{Output.FileType}";
+
     }
 }

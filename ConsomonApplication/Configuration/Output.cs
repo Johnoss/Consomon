@@ -95,7 +95,7 @@ namespace ConsomonApplication
             $"The farther you advance, the more difficult {Data.MobLabel}s you encounter.",
             $"The farther you advance, the more {LoadingLabel} interruptions you experience.",
             $"You should own a diverse selection of {Data.MobLabel}s' types, so you can adapt better.",
-            $"The less {Data.Stats[StatType.health].Title}s a {Data.MobLabel} has, the easier it is to catch.",
+            $"The less {Data.Stats[StatType.health].Title} the {Data.MobLabel} has, the easier it is to catch.",
         };
 
         #region Generic Outputs
@@ -168,13 +168,10 @@ namespace ConsomonApplication
             Console.SetCursorPosition(x, y);
         }
 
-        public static void WriteBinary(int count)
+        public static void WriteBinary()
         {
-            for (int i = 0; i < count; i++)
-            {
-                Console.Write(GenericOperations.GetRandom().Next(0, 2));
-                Thread.Sleep(5);
-            }
+            Console.Write(GenericOperations.GetRandom().Next(0, 2));
+            Thread.Sleep(10);
         }
         #endregion
 

@@ -11,7 +11,7 @@ namespace ConsomonApplication
         void Use(Player player);
         void Deplete(Player player);
     }
-
+    [Serializable]
     public abstract class Item : IUsable, ISupplyable
     {
         protected string name;
@@ -52,7 +52,7 @@ namespace ConsomonApplication
             return Output.ComposeGenericText(new string[] { name, Output.ItemUsed });
         }
     }
-
+    [Serializable]
     public class StatResetter : Item //reset stat(s) to player's selected Mob
     {
         StatType[] statsToReset; //for simplicity, only restore stat to full, not partially
@@ -79,6 +79,7 @@ namespace ConsomonApplication
         }
     }
 
+    [Serializable]
     public class MobContainer : Item
     {
         public MobContainer(string name, int price, string description)

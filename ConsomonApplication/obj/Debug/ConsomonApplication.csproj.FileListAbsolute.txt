@@ -11,3 +11,17 @@ C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\Consomon
 C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\ConsomonApplication\bin\Debug\Properties\ConsomonTheme.wav
 C:\Users\User\documents\visual studio 2017\Projects\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.CoreCompileInputs.cache
 C:\Users\User\documents\visual studio 2017\Projects\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\Properties\ConsomonBattleTheme.wav
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\Properties\ConsomonTheme.wav
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\ConsomonApplication.exe.config
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\ConsomonApplication.exe
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\ConsomonApplication.pdb
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\MathNet.Numerics.dll
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\MathNet.Numerics.xml
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.Properties.Resources.resources
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.GenerateResource.Cache
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.exe
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.pdb
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\Properties\Player.csm

@@ -7,6 +7,7 @@ using MathNet.Numerics.Distributions;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Wilderness : Location
     {
         private int exploredCurrent;
@@ -123,7 +124,7 @@ namespace ConsomonApplication
 
         private void GenerateEncounter(Player p)
         {
-            MusicPlayer.PlayTrack(1);
+            MusicPlayer.PlayTrack(MusicPlayer.BattleTheme);
             Mob enemy = Mob.InstantiateMob(SelectEncounterMob());
             Encounter encounter = new Encounter( enemy, p);
 

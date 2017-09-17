@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Town : Location
     {
         protected List<Establishment> establishments;

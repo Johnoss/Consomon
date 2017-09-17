@@ -2,6 +2,7 @@
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Encounter : Location
     {
         private Mob enemy = null;
@@ -95,7 +96,7 @@ namespace ConsomonApplication
         public void FinishCombat(Player p, string message, bool won = false)
         {
             combatInProgress = false;
-            MusicPlayer.PlayTrack(0);
+            MusicPlayer.PlayTrack(MusicPlayer.MainTheme);
             p.Champion.ResetMob(true);
             Console.Clear();
             Output.WriteGenericText(message);

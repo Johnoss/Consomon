@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Tutorial : Location
     {
         public Tutorial(string title, string description)
@@ -42,6 +43,9 @@ namespace ConsomonApplication
         public void Explore(Player p) //Not generic enough
         {
             Output.WriteCleanPause($"Welcome to {Data.MobLabel}");
+            Output.WriteGenericText($"This game uses the autosave feature.");
+            Output.WriteGenericText($"I don't care if you turn off your pc while saving.");
+            UI.Pause();
             Output.WriteCleanPause($"Let's get you set up with your first {Data.MobLabel}.");
             title ="Which of the following words you fancy the most?";
             description = "Press a corresponding key";
@@ -52,10 +56,13 @@ namespace ConsomonApplication
             Output.WriteCleanPause($"Your new {Data.MobLabel} is {p.Champion.NameRaw}");
             Console.Clear();
             Output.WriteGenericText("Look how cute it is.");
-            UI.Pause();
             Output.WriteGenericText("This is it's binary representation:");
             Thread.Sleep(400);
-            Output.WriteBinary(Console.WindowWidth * 4);
+            for (int i = 0; i < Console.WindowWidth * 2; i++)
+            {
+                Output.WriteBinary();
+
+            }
             UI.Pause();
             Output.WriteCleanPause($"It has {p.Champion.Stats[StatType.health].Value} {Data.Stats[StatType.health].Title}");
             Output.WriteGenericText($"The {Data.Stats[StatType.health].Title} represent it's overall health.");
@@ -66,7 +73,7 @@ namespace ConsomonApplication
             Output.WriteCleanPause($"It also has {p.Champion.Stats[StatType.energy].Value} {Data.Stats[StatType.energy].Title}");
             Output.WriteGenericText($"The {Data.Stats[StatType.energy].Title} are used for special abilities.");
             UI.Pause();
-            Output.WriteGenericText($"Enery {Data.MobLabel} has special abilities and it needs {Data.Stats[StatType.energy].Title} to use them.");
+            Output.WriteGenericText($"Every {Data.MobLabel} has special abilities and it needs {Data.Stats[StatType.energy].Title} to use them.");
             UI.Pause();
             Output.WriteGenericText($"You will discover more abilities as you catch more {Data.MobLabel}.");
             UI.Pause();

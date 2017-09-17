@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Mob : Actor, ISupplyable, IListable
     {
 

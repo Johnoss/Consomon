@@ -20,3 +20,4 @@ C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\Cons
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.exe
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.pdb
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Properties\Player.csm

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Stat
     {
         StatType Type { get => type; }
@@ -40,6 +41,7 @@ namespace ConsomonApplication
         }
     }
 
+    [Serializable]
     public struct StatInfo
     {
         private string title;

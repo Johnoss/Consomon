@@ -2,6 +2,7 @@
 
 namespace ConsomonApplication
 {
+    [Serializable]
     public class Controller
     {
         public delegate void InputReadEventHandler(object source, KeyReadEventArgs args);

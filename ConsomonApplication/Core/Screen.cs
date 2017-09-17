@@ -14,6 +14,7 @@ namespace ConsomonApplication
     {
         ISupplyable[] GetDynamicCollection();
     }
+    [Serializable]
     public class Screen
     {
         private string label;

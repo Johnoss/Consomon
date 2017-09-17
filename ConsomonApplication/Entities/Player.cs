@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace ConsomonApplication
 {
 
+    [Serializable]
     public class Player : IListable
     {
         private List<Mob> ownedMobs = new List<Mob>();
@@ -21,7 +22,6 @@ namespace ConsomonApplication
         private Screen currentScreen;
 
         private Mob champion;
-        private Mob target;
 
         private Controller controller = new Controller();
 
@@ -69,6 +69,7 @@ namespace ConsomonApplication
             currentLocation = location;
             previousLocation = buffer;
             Controls.ResetScreen(this);
+            SavePlayer();
         }
 
         public void Retreat()
@@ -88,6 +89,22 @@ namespace ConsomonApplication
             if (Data.Screens[ScreenType.selectMob] == currentScreen)
                 return SelectableMobs.ToArray();
             return new ISupplyable[0];
+        }
+
+        private void SavePlayer()
+        {
+            if(CurrentLocation is Town)
+                Serialization.WriteToBinaryFile(Settings.SavePath, Settings.SaveFile, this);
+        }
+
+        public static Player LoadPlayer()
+        {
+            Player p = Serialization.ReadFromBinaryFile<Player>(Settings.SavePath, Settings.SaveFile);
+            //p.CurrentLocation = p.LastTown = Data.Towns[Data.Towns.IndexOf((Town)p.CurrentLocation)];
+
+            p.Champion = p.OwnedMobs[p.OwnedMobs.IndexOf(p.Champion)];
+
+            return p;
         }
     }
 }
