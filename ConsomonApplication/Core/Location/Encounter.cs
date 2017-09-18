@@ -156,7 +156,7 @@ namespace ConsomonApplication
         private static int CalculateRewardMoney(float level)
         {
             float baseAmount = level * Settings.RewardLevelMultiplier + Settings.RewardDeviation;
-            return GenericOperations.RoundToClosestInt(baseAmount);
+            return GenericOperations.RoundToStepInt(baseAmount);
         }
     }
 }

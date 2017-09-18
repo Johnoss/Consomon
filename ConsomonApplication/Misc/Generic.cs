@@ -87,33 +87,9 @@ namespace ConsomonApplication
         /// <returns></returns>
         /// 
 
-        public static int RoundToClosestInt(double value, int roundTo = Settings.RoundRewards)
+        public static int RoundToStepInt(double value, int step = Settings.RoundRewards)
         {
-            return (int)Math.Round(value / roundTo) * roundTo;
-        }
-    }
-
-
-    public static class Extensions
-    {
-        public static T Clone<T>(this object item)
-        {
-            if (item != null)
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                MemoryStream stream = new MemoryStream();
-
-                formatter.Serialize(stream, item);
-                stream.Seek(0, SeekOrigin.Begin);
-
-                T result = (T)formatter.Deserialize(stream);
-
-                stream.Close();
-
-                return result;
-            }
-            else
-                return default(T);
+            return (int)Math.Round(value / step) * step;
         }
     }
 }

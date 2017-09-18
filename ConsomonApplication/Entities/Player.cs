@@ -15,7 +15,7 @@ namespace ConsomonApplication
         private Dictionary<ConsoleKey, string> controlScheme = new Dictionary<ConsoleKey, string>();
 
 
-        private Town lastTown;
+        private Town lastTown = Data.Towns[0];
         private Location currentLocation;
         private Location previousLocation;
 

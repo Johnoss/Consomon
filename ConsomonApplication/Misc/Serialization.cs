@@ -22,12 +22,7 @@ namespace ConsomonApplication
             }
         }
 
-        /// <summary>
-        /// Reads an object instance from a binary file.
-        /// </summary>
-        /// <typeparam name="T">The type of object to read from the XML.</typeparam>
-        /// <param name="filePath">The file path to read the object instance from.</param>
-        /// <returns>Returns a new instance of the object read from the binary file.</returns>
+
         public static T ReadFromBinaryFile<T>(string path, string file)
         {
             string filePath = $"{path}\\{file}";

@@ -7,6 +7,7 @@ C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\Consomon
 C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.csproj.GenerateResource.Cache
 C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.exe
 C:\Users\User\Documents\Visual Studio 2017\Projects\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.pdb
+C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Properties\Player.csm
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Properties\ConsomonBattleTheme.wav
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Properties\ConsomonTheme.wav
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\ConsomonApplication.exe.config
@@ -14,10 +15,8 @@ C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Cons
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\ConsomonApplication.pdb
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\MathNet.Numerics.dll
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\MathNet.Numerics.xml
-C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.Properties.Resources.resources
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.csproj.GenerateResource.Cache
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.exe
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Release\ConsomonApplication.pdb
-C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Release\Properties\Player.csm
