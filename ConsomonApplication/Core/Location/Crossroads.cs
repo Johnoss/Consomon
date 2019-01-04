@@ -23,7 +23,7 @@ namespace ConsomonApplication
 
             description = "Choose your destination:";
 
-            screen = ScreenType.travel;
+            screen = ScreenType.Travel;
         }
 
         public Wilderness GenerateWilderness(int destination)

@@ -15,7 +15,7 @@ namespace ConsomonApplication
         public Encounter(Mob enemy, Player p)
         {
             this.p = p;
-            screen = ScreenType.battle;
+            screen = ScreenType.Battle;
             this.enemy = enemy;
             Title = $"Encounter with {enemy.Name}";
         }
@@ -136,7 +136,7 @@ namespace ConsomonApplication
 
         private static bool CheckPulse(Mob patient)
         {
-            Stat health = patient.Stats[StatType.health];
+            Stat health = patient.Stats[StatType.Health];
             return health.Value > health.MinValue;
         }
 

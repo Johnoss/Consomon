@@ -10,7 +10,7 @@ namespace ConsomonApplication
     {
 
 
-        public Ability[] UsableAbilities { get { return abilities.Where(a => a.Cost <= Stats[StatType.energy].Value).ToArray(); }  }
+        public Ability[] UsableAbilities { get { return abilities.Where(a => a.Cost <= Stats[StatType.Energy].Value).ToArray(); }  }
 
         public Mob(MobType type, string name, int health, int energy, int defence, int attack, int abilityMultiplyer, Ability[] abilities)
         {
@@ -19,11 +19,11 @@ namespace ConsomonApplication
             this.name = name;
             this.type = type;
             this.abilities = abilities;
-            Stats.Add(StatType.health, new Stat(health, health, 0));
-            Stats.Add(StatType.energy, new Stat(energy, energy, 0));
-            Stats.Add(StatType.defence, new Stat(Settings.MaxDefence, defence, Settings.MinDefence));
-            Stats.Add(StatType.attack, new Stat(Settings.MaxAttack, attack, Settings.MinAttack));
-            Stats.Add(StatType.abilityMP, new Stat(Settings.MaxAbilityMP, abilityMultiplyer, Settings.MinAbilityMP));
+            Stats.Add(StatType.Health, new Stat(health, health, 0));
+            Stats.Add(StatType.Energy, new Stat(energy, energy, 0));
+            Stats.Add(StatType.Defence, new Stat(Settings.MaxDefence, defence, Settings.MinDefence));
+            Stats.Add(StatType.Attack, new Stat(Settings.MaxAttack, attack, Settings.MinAttack));
+            Stats.Add(StatType.AbilityMp, new Stat(Settings.MaxAbilityMP, abilityMultiplyer, Settings.MinAbilityMP));
             target = null;
             wild = true;
 
@@ -54,7 +54,7 @@ namespace ConsomonApplication
         {
             foreach (KeyValuePair<StatType, Stat> s in Stats)
             {
-                if (!(battleStatsOnly && (s.Key == StatType.health || s.Key == StatType.energy)))
+                if (!(battleStatsOnly && (s.Key == StatType.Health || s.Key == StatType.Energy)))
                     s.Value.Value = s.Value.DefaultValue;
             }
             actionsLeft = Settings.defaultActions;
@@ -62,12 +62,12 @@ namespace ConsomonApplication
 
         public string GetLabel(Screen s)
         {
-            if(s == Data.Screens[ScreenType.starting])
+            if(s == Data.Screens[ScreenType.Starting])
             {
                 return type.ToString();
             }
-            string priceLabel = (s == Data.Screens[ScreenType.selectMob]) ? "" : $"({price}{Output.CurrencyName[0]}) ";
-            return $"{priceLabel}[{type}] {NameRaw} {Stats[StatType.health].Value}/{Stats[StatType.energy].Value}/{Stats[StatType.defence].Value}/{Stats[StatType.attack].Value}";
+            string priceLabel = (s == Data.Screens[ScreenType.SelectMob]) ? "" : $"({price}{Output.CurrencyName[0]}) ";
+            return $"{priceLabel}[{type}] {NameRaw} {Stats[StatType.Health].Value}/{Stats[StatType.Energy].Value}/{Stats[StatType.Defence].Value}/{Stats[StatType.Attack].Value}";
         }
 
         public ISupplyable[] GetDynamicCollection()
@@ -84,7 +84,7 @@ namespace ConsomonApplication
 
         public static Mob InstantiateMob(Mob mold, bool wild = true)
         {
-            Mob clone = new Mob(mold.Type, mold.NameRaw, mold.Stats[StatType.health].MaxValue, mold.Stats[StatType.energy].MaxValue, mold.Stats[StatType.defence].Value, mold.Stats[StatType.attack].Value, mold.Stats[StatType.abilityMP].Value, mold.abilities)
+            Mob clone = new Mob(mold.Type, mold.NameRaw, mold.Stats[StatType.Health].MaxValue, mold.Stats[StatType.Energy].MaxValue, mold.Stats[StatType.Defence].Value, mold.Stats[StatType.Attack].Value, mold.Stats[StatType.AbilityMp].Value, mold.abilities)
             {
                 Wild = wild
             };
@@ -99,7 +99,7 @@ namespace ConsomonApplication
 
         public void Attack()
         {
-            int damage = Stats[StatType.attack].Value - target.Stats[StatType.defence].Value;
+            int damage = Stats[StatType.Attack].Value - target.Stats[StatType.Defence].Value;
 
 
             bool strong = GenericOperations.CalculateTypeAdvantage(Type, Target.Type);
@@ -114,14 +114,14 @@ namespace ConsomonApplication
             if (damage < Settings.MinDamage)
                 damage = Settings.MinDamage;
 
-            int targetHealth = target.Stats[StatType.health].Value;
+            int targetHealth = target.Stats[StatType.Health].Value;
             if (damage > targetHealth)
                 damage = targetHealth;
 
             if(strong)
                 damage *= (int)Math.Ceiling(Settings.StrongMP);
 
-            target.ModifyStat(StatType.health, -damage);
+            target.ModifyStat(StatType.Health, -damage);
             actionsLeft--;
         }
 
@@ -129,13 +129,13 @@ namespace ConsomonApplication
         public void UseAbility(Ability ability)
         {
             Output.WritelineUsedAction(this, ability.Title);
-            ModifyStat(StatType.energy, -Settings.AbilityPrice);
+            ModifyStat(StatType.Energy, -Settings.AbilityPrice);
             foreach (AbilityElement ae in Data.AbilityTemplates[ability.Template].Elements)
             {
                 Mob tg = ae.Self ? this : target; //whom to target
                 int baseValue = Settings.DefaultAbilityValue;  //default base value by game settings
                 baseValue = ae.Increase ? baseValue : baseValue * -1; //increase or decrease?
-                double modifier = Stats[StatType.abilityMP].Value / 100.0; //apply Ability multiplier stat
+                double modifier = Stats[StatType.AbilityMp].Value / 100.0; //apply Ability multiplier stat
                 int calculatedValue = (int)Math.Ceiling(baseValue * modifier); //result value int
                 tg.ModifyStat(ae.Stat, calculatedValue); //execute
             }
@@ -157,7 +157,7 @@ namespace ConsomonApplication
         {
             Random rnd = new Random();
             int percentage = rnd.Next(1, 100);
-            if (Stats[StatType.energy].Value >= Settings.AbilityPrice && percentage < Settings.EnemyAgression) 
+            if (Stats[StatType.Energy].Value >= Settings.AbilityPrice && percentage < Settings.EnemyAgression) 
             {
                 UseAbility(DecideAbility());
             }

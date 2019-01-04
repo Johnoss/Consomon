@@ -25,3 +25,17 @@ C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\Consom
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.exe
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\obj\Debug\ConsomonApplication.pdb
 C:\Users\User\Documents\ConsomonApplication\ConsomonApplication\bin\Debug\Properties\Player.csm
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\Properties\Player.csm
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\Properties\ConsomonBattleTheme.wav
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\Properties\ConsomonTheme.wav
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\ConsomonApplication.exe.config
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\ConsomonApplication.exe
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\ConsomonApplication.pdb
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\MathNet.Numerics.dll
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\bin\Debug\MathNet.Numerics.xml
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.Properties.Resources.resources
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.GenerateResource.cache
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.CoreCompileInputs.cache
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.csproj.CopyComplete
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.exe
+C:\Users\JanHuda\Documents\Consomon\ConsomonApplication\obj\Debug\ConsomonApplication.pdb

@@ -114,7 +114,7 @@ namespace ConsomonApplication
 
         private static void SpecificScreensInit(Player p)
         {
-            if (p.CurrentLocation is Encounter e && p.CurrentScreen == Data.Screens[ScreenType.battle])
+            if (p.CurrentLocation is Encounter e && p.CurrentScreen == Data.Screens[ScreenType.Battle])
                 e.WriteCombatantsInfo(p);
         }
     }

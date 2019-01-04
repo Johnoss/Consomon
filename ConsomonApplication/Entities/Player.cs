@@ -28,7 +28,7 @@ namespace ConsomonApplication
         private int money = Settings.StartingMoney;
 
         public List<Mob> OwnedMobs { get => ownedMobs; set => ownedMobs = value; }
-        public List<Mob> SelectableMobs { get => ownedMobs.Where(m => m.Stats[StatType.health].Value > m.Stats[StatType.health].MinValue).ToList(); } //list of mobs with health above 0
+        public List<Mob> SelectableMobs { get => ownedMobs.Where(m => m.Stats[StatType.Health].Value > m.Stats[StatType.Health].MinValue).ToList(); } //list of mobs with health above 0
         public Dictionary<Item, int> Inventory { get => inventory; set => inventory = value; }
         public Dictionary<ConsoleKey, string> ControlScheme { get => controlScheme; set => controlScheme = value; }
         public Location CurrentLocation { get => currentLocation; set => currentLocation = value; }
@@ -84,9 +84,9 @@ namespace ConsomonApplication
 
         public ISupplyable[] GetDynamicCollection()
         {
-            if (Data.Screens[ScreenType.selectItem] == currentScreen)
+            if (Data.Screens[ScreenType.SelectItem] == currentScreen)
                 return inventory.Keys.ToArray();
-            if (Data.Screens[ScreenType.selectMob] == currentScreen)
+            if (Data.Screens[ScreenType.SelectMob] == currentScreen)
                 return SelectableMobs.ToArray();
             return new ISupplyable[0];
         }

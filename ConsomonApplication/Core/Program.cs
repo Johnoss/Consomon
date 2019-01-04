@@ -42,6 +42,7 @@ namespace ConsomonApplication
                 else
                 {
                     p = new Player();
+                    p.LastTown = Data.Towns[0];
                     StartTutorial();
                 }
             }

@@ -22,10 +22,10 @@ namespace ConsomonApplication
         {
             switch(screen)
             {
-                case ScreenType.shop:
+                case ScreenType.Shop:
                     stock = Data.Items.ToArray();
                     break;
-                case ScreenType.mobDealer:
+                case ScreenType.MobDealer:
                     stock = GetSellableMobs(town);
                     break;
             }

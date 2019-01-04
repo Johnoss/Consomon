@@ -49,7 +49,7 @@ namespace ConsomonApplication
 
             description = $"{Output.DidYouKnowSentence} {Output.ProTips[GenericOperations.GetRandom().Next(0, Output.ProTips.Count)]}";
 
-            screen = ScreenType.wilderness;
+            screen = ScreenType.Wilderness;
             
         }
 

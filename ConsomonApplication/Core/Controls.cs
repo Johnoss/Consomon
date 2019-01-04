@@ -100,7 +100,7 @@ namespace ConsomonApplication
 
         public static void SelectMobScreen(Player p)
         {
-            p.ChangeScreen(Data.Screens[ScreenType.selectMob], p);
+            p.ChangeScreen(Data.Screens[ScreenType.SelectMob], p);
             UI.InitializeScreen(p);
             p.ReadInput();
             ResetScreen(p);
@@ -109,7 +109,7 @@ namespace ConsomonApplication
 
         public static void SelectItemScreen(Player p)
         {
-            p.ChangeScreen(Data.Screens[ScreenType.selectItem], p);
+            p.ChangeScreen(Data.Screens[ScreenType.SelectItem], p);
             UI.InitializeScreen(p);
             p.ReadInput();
             ResetScreen(p);

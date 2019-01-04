@@ -37,7 +37,7 @@ namespace ConsomonApplication
         public string GetLabel(Screen s)
         {
 
-            string priceLabel = (s == Data.Screens[ScreenType.selectMob]) ? "" : $"({price}{Output.CurrencyName[0]}) ";
+            string priceLabel = (s == Data.Screens[ScreenType.SelectMob]) ? "" : $"({price}{Output.CurrencyName[0]}) ";
             return $"{priceLabel}{name} - {description}";
         }
 
@@ -125,8 +125,8 @@ namespace ConsomonApplication
 
         private double CalculateChance(Mob target)
         {
-            Stat health = target.Stats[StatType.health];
-            Stat defence = target.Stats[StatType.defence];
+            Stat health = target.Stats[StatType.Health];
+            Stat defence = target.Stats[StatType.Defence];
             float coeficient = -2;
             double lifeRatio = GenericOperations.GetRatio(health.MinValue, health.MaxValue, health.Value);
             double baseChance = lifeRatio*(lifeRatio + coeficient) + 1;

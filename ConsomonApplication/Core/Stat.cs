@@ -32,7 +32,7 @@ namespace ConsomonApplication
 
         public Stat(int maxValue, int value, int minValue)
         {
-            type = StatType.health;
+            type = StatType.Health;
 
             defaultValue = value;
             this.maxValue = maxValue;

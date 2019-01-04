@@ -16,7 +16,7 @@ namespace ConsomonApplication
         {
             this.title = title;
             this.description = description;
-            screen = ScreenType.starting;
+            screen = ScreenType.Starting;
 
             level = 0;
         }
@@ -64,20 +64,20 @@ namespace ConsomonApplication
 
             }
             UI.Pause();
-            Output.WriteCleanPause($"It has {p.Champion.Stats[StatType.health].Value} {Data.Stats[StatType.health].Title}");
-            Output.WriteGenericText($"The {Data.Stats[StatType.health].Title} represent it's overall health.");
+            Output.WriteCleanPause($"It has {p.Champion.Stats[StatType.Health].Value} {Data.Stats[StatType.Health].Title}");
+            Output.WriteGenericText($"The {Data.Stats[StatType.Health].Title} represent it's overall health.");
             UI.Pause();
             Output.WriteGenericText($"If a {Data.MobLabel} runs out of pixels, it'll throw an exception");
             Output.WriteGenericText($"and won't be able to fight until healed.");
             UI.Pause();
-            Output.WriteCleanPause($"It also has {p.Champion.Stats[StatType.energy].Value} {Data.Stats[StatType.energy].Title}");
-            Output.WriteGenericText($"The {Data.Stats[StatType.energy].Title} are used for special abilities.");
+            Output.WriteCleanPause($"It also has {p.Champion.Stats[StatType.Energy].Value} {Data.Stats[StatType.Energy].Title}");
+            Output.WriteGenericText($"The {Data.Stats[StatType.Energy].Title} are used for special abilities.");
             UI.Pause();
-            Output.WriteGenericText($"Every {Data.MobLabel} has special abilities and it needs {Data.Stats[StatType.energy].Title} to use them.");
+            Output.WriteGenericText($"Every {Data.MobLabel} has special abilities and it needs {Data.Stats[StatType.Energy].Title} to use them.");
             UI.Pause();
             Output.WriteGenericText($"You will discover more abilities as you catch more {Data.MobLabel}.");
             UI.Pause();
-            Output.WriteCleanPause($"It also has {p.Champion.Stats[StatType.defence].Value} {Data.Stats[StatType.defence].Title} and {p.Champion.Stats[StatType.attack].Value} {Data.Stats[StatType.attack].Title}");
+            Output.WriteCleanPause($"It also has {p.Champion.Stats[StatType.Defence].Value} {Data.Stats[StatType.Defence].Title} and {p.Champion.Stats[StatType.Attack].Value} {Data.Stats[StatType.Attack].Title}");
             Output.WriteGenericText($"Those stats determine the damage your {Data.MobLabel} receives and inflicts.");
             UI.Pause();
             Output.WriteCleanPause($"Travel around, catch more {Data.MobLabel}s and become the master of this shit.");

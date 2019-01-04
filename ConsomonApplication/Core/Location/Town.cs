@@ -28,7 +28,7 @@ namespace ConsomonApplication
 
             description = $"You are in {title}. The folks around here worship {townType} gods.";
 
-            screen = ScreenType.town;
+            screen = ScreenType.Town;
 
             crossroad = new Crossroads(connectedTowns, this);
         }
